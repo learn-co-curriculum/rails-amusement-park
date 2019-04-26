@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <h1> <%= @user.name %> Page </h1>
+  
+  <% if @user.rides.last %>
+    <%= @user.rides.last.take_ride %>
+  <% end %>
+
+  <% if @user.admin === true %>
+    <%= "ADMIN"%>
+  <% end %>
+  Height: <%= @user.height %>
+  Mood: <%= @user.mood %>
+  Happiness: <%= @user.happiness %>
+  Nausea: <%= @user.nausea %>
+  Tickets: <%= @user.tickets %>
+
+  <%= link_to "See attractions", attractions_path %>
+</html>
