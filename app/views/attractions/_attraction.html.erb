@@ -1,0 +1,7 @@
+<tr>
+  <td><img src="http://www.allthingsclipart.com/05/amusement.park.05.jpg" width="100"></td>
+  <td><%= attraction.name %> </td>
+  <td><%= attraction.tickets %> </td>
+  <td><%=  link_to "Go on #{attraction.name}", attraction_path(attraction) unless current_user.admin %></td>
+  <td><%=  link_to "Show #{attraction.name}", attraction_path(attraction) if current_user.admin %></td>
+</tr>
